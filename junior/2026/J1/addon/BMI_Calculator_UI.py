@@ -1,6 +1,14 @@
 import tkinter as tk
 from tkinter import font as tkfont
 
+# Features
+# - Metric / Imperial toggle — switches between kg/cm and lbs/in seamlessly
+# - Live gauge bar — a colour-coded progress bar spanning BMI 10–40
+# - Category display — shows Underweight / Normal / Overweight / Obese with a matching colour
+# - Health tip — a short contextual message per category
+# - Enter key support — press Enter to calculate without clicking the button
+# - Input validation — friendly error message for invalid inputs
+
 
 # ── Color palette ──────────────────────────────────────────────
 BG        = "#0F1724"   # deep navy
