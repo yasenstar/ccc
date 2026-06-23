@@ -1,3 +1,51 @@
+def compare(i, j, ni, mj, sn, sm):
+    if (ni == 'R'):
+        if (mj == 'G'):
+            print("Ngoc[",i,"] wins")
+            sn = sn + 1
+            j = j + 1
+        elif (mj == 'B'):
+            print("Minh[",j,"] wins")
+            sm = sm + 1
+            i = i + 1
+        else:
+            print("Both are Red in same color")
+            sn = sn + 1
+            sm = sm + 1
+            i = i + 1
+            j = j + 1
+    elif (ni == 'G'):
+        if (mj == 'B'):
+            print("Ngoc[",i,"] wins")
+            sn = sn + 1
+            j = j + 1
+        elif (mj == 'R'):
+            print("Minh[",j,"] wins")
+            sm = sm + 1
+            i = i + 1
+        else:
+            print("Both are Green in same color")
+            sn = sn + 1
+            sm = sm + 1
+            i = i + 1
+            j = j + 1
+    else:
+        if (mj == 'R'):
+            print("Ngoc[",i,"] wins")
+            sn = sn + 1
+            j = j + 1
+        elif (mj == 'G'):
+            print("Minh[",j,"] wins")
+            sm = sm + 1
+            i + i + 1
+        else:
+            print("Both are Blue in same color")
+            sm = sm + 1
+            i = i + 1
+            j = j + 1
+    return i, j, sn, sm
+
+
 Ngoc = input("All in capital, for Ngoc's candies: ")
 Minh = input("All in capitcal, for Minh's candies: ")
 
@@ -12,20 +60,23 @@ for i in Minh:
 
 print(len(n), len(m))
 
-compete_num = min(len(n), len(m))
+print(n, m)
 
-score_n = 0
-score_m = 0
+print(min(len(n),len(m)))
 
-for i in range(compete_num):
-    if n[i] == m[i]:
-        score_n = score_n + 1
-        score_m = score_m + 1
-        n.pop(i)
-        m.pop(i)
-        compete_num = min(len(n), len(m))
-        print(compete_num)
+smaller = min(len(n),len(m))
 
-print(Ngoc, score_n)
+i = 0
 
-print(Minh, score_m)
+j = 0
+
+sn = 0
+
+sm = 0
+
+while (i<=(smaller-1)):
+    j = i
+    i, j, sn, sm = compare(i,j,n[i],m[j],sn,sm)
+
+print("sn = ", sn)
+print("sm = ", sm)
