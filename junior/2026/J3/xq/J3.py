@@ -37,12 +37,14 @@ def compare(i, j, ni, mj, sn, sm):
         elif (mj == 'G'):
             print("Minh[",j,"] wins")
             sm = sm + 1
-            i + i + 1
+            i = i + 1
         else:
             print("Both are Blue in same color")
+            sn = sn + 1
             sm = sm + 1
             i = i + 1
             j = j + 1
+    print(f'i={i}, j={j}, sn={sn}, sm={sm}')
     return i, j, sn, sm
 
 
@@ -62,8 +64,6 @@ print(len(n), len(m))
 
 print(n, m)
 
-print(min(len(n),len(m)))
-
 smaller = min(len(n),len(m))
 
 i = 0
@@ -74,9 +74,13 @@ sn = 0
 
 sm = 0
 
-while (i<=(smaller-1)):
-    j = i
+while (i<len(n) and j<len(m)):
     i, j, sn, sm = compare(i,j,n[i],m[j],sn,sm)
+
+if i == len(n):
+    sm = sm + (len(m)-j)
+else:
+    sn = sn + (len(n)-i)
 
 print("sn = ", sn)
 print("sm = ", sm)
