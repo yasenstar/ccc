@@ -11,5 +11,5 @@
 a = input("input candy line 1: ")
 b = input("input candy line 2: ")
 
-result = compare(a, b)
+result = (a, b)
 print(result)
