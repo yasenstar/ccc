@@ -25,8 +25,6 @@ def create_trace(moves):
                     trace.append((x,y))
     return trace
 
-
-
 m = int(input("Number of movements taken by the snail: "))
 s = []
 for i in range(m):

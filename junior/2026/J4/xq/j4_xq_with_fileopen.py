@@ -39,7 +39,6 @@ with open("doc/junior/2026/2026CCCJuniorTestData/j4/data/j4.04.04.in", "r") as f
 s.pop(len(s)-1)
 print(m, s)
 
-
 # m = int(input("Number of movements taken by the snail: "))
 # s = []
 # for i in range(int(m)):
